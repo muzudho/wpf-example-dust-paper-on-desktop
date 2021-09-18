@@ -11,5 +11,11 @@
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // このウィンドウを閉じます
+            this.Close();
+        }
     }
 }
