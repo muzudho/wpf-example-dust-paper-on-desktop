@@ -51,25 +51,44 @@
                     VerticalAlignment="Top">
             <TextBlock FontSize="20" Text="6 + 7 = 15" TextDecorations="Strikethrough"/>
             <TextBlock FontSize="20">6 + 7 = 13<LineBreak/>13 + 3 = 16</TextBlock>
-            
-            <!-- さすがに閉じるボタンが無いと邪魔なので置きます -->
         </StackPanel>
-        <!-- ボタンを並べます -->
+        
         <Grid Grid.Row="1" Grid.ColumnSpan="2" Width="240" Height="140">
+            <!-- 2行0列のグリッド -->
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <Button Width="60" Height="30"
-                    Content="最小化" Click="MinimizeButton_Click"/>
-                <Button Width="60" Height="30"
-                    Content="通常化" Click="NormalizeButton_Click" />
-                <Button Width="60" Height="30"
-                    Content="最大化" Click="MaximizeButton_Click" />
-                <Button Width="60" Height="30"
-                    Content="閉じる" Click="CloseButton_Click"/>
+            <!-- 1行目 ここにボタンを並べてください -->
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="40" Height="30"
+                    Content="最小" Click="MinimizeButton_Click"/>
+                
+                <!-- 元のサイズに戻すボタンです -->
+                <Button Width="80" Height="30"
+                    Content="元サイズ戻す" Click="NormalizeButton_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <!-- トリガーをここに並べてください -->
+                            <ControlTemplate.Triggers>
+                                
+                                <!-- Window.WindowState が Normal のとき、ボタンの場所を無くしてください -->
+                                <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}"
+                                             Value="Normal">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                                
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                
+                <Button Width="40" Height="30"
+                    Content="最大" Click="MaximizeButton_Click" />
+                
+                <Button Width="40" Height="30"
+                    Content="閉じ" Click="CloseButton_Click"/>
             </StackPanel>
         </Grid>
     </Grid>
