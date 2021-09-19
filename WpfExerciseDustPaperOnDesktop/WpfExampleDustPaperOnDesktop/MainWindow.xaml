@@ -70,6 +70,15 @@
                     Content="元サイズ戻す" Click="NormalizeButton_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
+                            
+                            <!-- ニュートラル状態でのボタンのルックスです -->
+                            <Grid>
+                                <Rectangle Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                           Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
+                                            Fill="{TemplateBinding Background}"/>
+                                <Label Content="{TemplateBinding Content}"/>
+                            </Grid>
+                            
                             <!-- トリガーをここに並べてください -->
                             <ControlTemplate.Triggers>
                                 
