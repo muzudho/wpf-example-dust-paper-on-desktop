@@ -55,7 +55,7 @@
             <!-- さすがに閉じるボタンが無いと邪魔なので置きます -->
         </StackPanel>
         <!-- ボタンを並べます -->
-        <Grid Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="140">
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Width="240" Height="140">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="Auto"/>
@@ -64,6 +64,8 @@
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <Button Width="60" Height="30"
                     Content="最小化" Click="MinimizeButton_Click"/>
+                <Button Width="60" Height="30"
+                    Content="最大化" Click="MaximizeButton_Click" />
                 <Button Width="60" Height="30"
                     Content="閉じる" Click="CloseButton_Click"/>
             </StackPanel>

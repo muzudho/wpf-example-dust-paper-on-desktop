@@ -18,6 +18,12 @@
             this.WindowState = WindowState.Minimized;
         }
 
+        private void MaximizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            // ウィンドウを最大化します
+            this.WindowState = WindowState.Maximized;
+        }
+
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             // このウィンドウを閉じます
