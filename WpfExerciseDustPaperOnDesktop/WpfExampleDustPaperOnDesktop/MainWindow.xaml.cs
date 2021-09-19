@@ -18,6 +18,12 @@
             this.WindowState = WindowState.Minimized;
         }
 
+        private void NormalizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            // 最大化しているウィンドウを元に戻します
+            this.WindowState = WindowState.Normal;
+        }
+
         private void MaximizeButton_Click(object sender, RoutedEventArgs e)
         {
             // ウィンドウを最大化します

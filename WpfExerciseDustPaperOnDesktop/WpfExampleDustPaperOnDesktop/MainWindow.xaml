@@ -65,6 +65,8 @@
                 <Button Width="60" Height="30"
                     Content="最小化" Click="MinimizeButton_Click"/>
                 <Button Width="60" Height="30"
+                    Content="通常化" Click="NormalizeButton_Click" />
+                <Button Width="60" Height="30"
                     Content="最大化" Click="MaximizeButton_Click" />
                 <Button Width="60" Height="30"
                     Content="閉じる" Click="CloseButton_Click"/>
