@@ -78,24 +78,45 @@
                                             Fill="{TemplateBinding Background}"/>
                                 <Label Content="{TemplateBinding Content}"/>
                             </Grid>
-                            
-                            <!-- トリガーをここに並べてください -->
+
                             <ControlTemplate.Triggers>
-                                
-                                <!-- Window.WindowState が Normal のとき、ボタンの場所を無くしてください -->
+                                <!-- ウィンドウのサイズがニュートラルな状態のとき、[元のサイズに戻す]ボタンの場所を無くします -->
                                 <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}"
                                              Value="Normal">
                                     <Setter Property="Visibility" Value="Collapsed"/>
                                 </DataTrigger>
-                                
                             </ControlTemplate.Triggers>
+                            
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
                 
+                <!-- ウィンドウを最大化するボタンです -->
                 <Button Width="40" Height="30"
-                    Content="最大" Click="MaximizeButton_Click" />
-                
+                    Content="最大" Click="MaximizeButton_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+
+                            <!-- ニュートラル状態でのボタンのルックスです -->
+                            <Grid>
+                                <Rectangle Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                           Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
+                                            Fill="{TemplateBinding Background}"/>
+                                <Label Content="{TemplateBinding Content}"/>
+                            </Grid>
+
+                            <ControlTemplate.Triggers>
+                                <!-- ウィンドウのサイズが最大の状態のとき、[元のサイズに戻す]ボタンの場所を無くします -->
+                                <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}"
+                                             Value="Maximized">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                            </ControlTemplate.Triggers>
+
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
                 <Button Width="40" Height="30"
                     Content="閉じ" Click="CloseButton_Click"/>
             </StackPanel>
