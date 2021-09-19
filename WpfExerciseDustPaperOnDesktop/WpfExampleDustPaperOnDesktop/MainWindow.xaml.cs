@@ -12,7 +12,13 @@
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            // ウィンドウを最小化します
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             // このウィンドウを閉じます
             this.Close();
