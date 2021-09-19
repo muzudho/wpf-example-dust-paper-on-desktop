@@ -1,5 +1,6 @@
 ﻿namespace WpfExampleDustPaperOnDesktop
 {
+    using System.Diagnostics;
     using System.Windows;
 
     /// <summary>
@@ -34,6 +35,16 @@
         {
             // このウィンドウを閉じます
             this.Close();
+        }
+
+        /// <summary>
+        /// 紙の上でマウスボタンを押下したとき
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Application_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Trace.WriteLine($"マウスボタンを押下しました。 sender.GetType()=[{sender.GetType()}]");
         }
     }
 }

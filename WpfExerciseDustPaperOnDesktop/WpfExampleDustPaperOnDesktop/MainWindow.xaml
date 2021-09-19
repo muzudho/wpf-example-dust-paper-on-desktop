@@ -33,20 +33,23 @@
         </Grid.ColumnDefinitions>
         
         <!-- 左上に四角。ちらしっぽいメッセージを書きましょう -->
-        <Rectangle Width="140" Height="140" Fill="WhiteSmoke"/>
+        <Rectangle Width="140" Height="140" Fill="WhiteSmoke"
+                   MouseDown="Application_MouseDown"/>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                    TextAlignment="Center"
                    FontSize="20">ここに<LineBreak/>紙を貼るな！</TextBlock>
 
         <!-- 右上に丸。ちらしっぽいメッセージを書きましょう -->
-        <Ellipse Grid.Column="1" Width="140" Height="140" Fill="PapayaWhip"/>
+        <Ellipse Grid.Column="1" Width="140" Height="140" Fill="PapayaWhip"
+                 MouseDown="Application_MouseDown"/>
         <TextBlock Grid.Column="1"
                    HorizontalAlignment="Center" VerticalAlignment="Center"
                    TextAlignment="Center"
                    FontSize="20">へ　へ<LineBreak/>の　の<LineBreak/>も<LineBreak/>へ</TextBlock>
 
         <!-- 下段に長方形。ちらしっぽいメッセージを書きましょう -->
-        <Rectangle Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="140" Fill="AliceBlue"/>
+        <Rectangle Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="140" Fill="AliceBlue"
+                   MouseDown="Application_MouseDown"/>
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="140"
                     VerticalAlignment="Top">
             <TextBlock FontSize="20" Text="6 + 7 = 15" TextDecorations="Strikethrough"/>
