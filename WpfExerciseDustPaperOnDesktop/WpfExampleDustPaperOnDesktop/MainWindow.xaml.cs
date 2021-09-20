@@ -14,19 +14,19 @@
             InitializeComponent();
         }
 
-        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        private void MinimizedButton_Click(object sender, RoutedEventArgs e)
         {
             // ウィンドウを最小化します
             this.WindowState = WindowState.Minimized;
         }
 
-        private void NormalizeButton_Click(object sender, RoutedEventArgs e)
+        private void NormalButton_Click(object sender, RoutedEventArgs e)
         {
             // 最大化しているウィンドウを元に戻します
             this.WindowState = WindowState.Normal;
         }
 
-        private void MaximizeButton_Click(object sender, RoutedEventArgs e)
+        private void MaximizedButton_Click(object sender, RoutedEventArgs e)
         {
             // ウィンドウを最大化します
             this.WindowState = WindowState.Maximized;
