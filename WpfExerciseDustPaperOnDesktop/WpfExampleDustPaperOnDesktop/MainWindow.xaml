@@ -16,6 +16,13 @@
         Title="MainWindow" Width="300" Height="300"
         WindowStyle="None" AllowsTransparency="True" Background="#00000000"
         ResizeMode="NoResize">
+
+    <!--
+        xmlns:viewModels="clr-namespace:WpfExampleDustPaperOnDesktop.ViewModels"
+    <Window.DataContext>
+        <viewModels:MainWindowViewModel/>
+    </Window.DataContext>
+    -->
     
     <!--
         くしゃくしゃになった ちり紙 を表現したいですが、
@@ -34,24 +41,24 @@
         
         <!-- 左上に四角。ちらしっぽいメッセージを書きましょう -->
         <Rectangle Width="140" Height="140" Fill="WhiteSmoke"
-                   MouseDown="Application_MouseDown"/>
+                   MouseDown="Application_MouseDown" MouseUp="Application_MouseUp"/>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                    TextAlignment="Center"
-                   FontSize="20">ここに<LineBreak/>紙を貼るな！</TextBlock>
+                   FontSize="20" IsHitTestVisible="False">ここに<LineBreak/>紙を貼るな！</TextBlock>
 
         <!-- 右上に丸。ちらしっぽいメッセージを書きましょう -->
         <Ellipse Grid.Column="1" Width="140" Height="140" Fill="PapayaWhip"
-                 MouseDown="Application_MouseDown"/>
+                 MouseDown="Application_MouseDown" MouseUp="Application_MouseUp"/>
         <TextBlock Grid.Column="1"
                    HorizontalAlignment="Center" VerticalAlignment="Center"
                    TextAlignment="Center"
-                   FontSize="20">へ　へ<LineBreak/>の　の<LineBreak/>も<LineBreak/>へ</TextBlock>
+                   FontSize="20" IsHitTestVisible="False">へ　へ<LineBreak/>の　の<LineBreak/>も<LineBreak/>へ</TextBlock>
 
         <!-- 下段に長方形。ちらしっぽいメッセージを書きましょう -->
         <Rectangle Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="140" Fill="AliceBlue"
-                   MouseDown="Application_MouseDown"/>
+                   MouseDown="Application_MouseDown" MouseUp="Application_MouseUp"/>
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="140"
-                    VerticalAlignment="Top">
+                    VerticalAlignment="Top" IsHitTestVisible="False">
             <TextBlock FontSize="20" Text="6 + 7 = 15" TextDecorations="Strikethrough"/>
             <TextBlock FontSize="20">6 + 7 = 13<LineBreak/>13 + 3 = 16</TextBlock>
         </StackPanel>
