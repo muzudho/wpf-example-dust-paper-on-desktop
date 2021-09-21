@@ -43,13 +43,13 @@
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Application_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void DustPaper_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             var coord = ((Visual)sender).PointToScreen(e.GetPosition((IInputElement)sender));
             Trace.WriteLine($"マウスボタンを押下しました。 sender.GetType()=[{sender.GetType()}] x=[{coord.X}] y=[{coord.Y}]");
         }
 
-        private void Application_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void DustPaper_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             var coord = ((Visual)sender).PointToScreen(e.GetPosition((IInputElement)sender));
             Trace.WriteLine($"マウスボタンが離されました。 sender.GetType()=[{sender.GetType()}] x=[{coord.X}] y=[{coord.Y}]");

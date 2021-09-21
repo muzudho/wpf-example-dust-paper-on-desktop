@@ -32,15 +32,15 @@
             <!-- ニュートラル状態でのボタンのルックスです -->
             <Grid>
                 <Rectangle Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
-                                           Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
-                                            Fill="{TemplateBinding Background}"/>
+                           Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
+                           Fill="{TemplateBinding Background}"/>
                 <Label Content="{TemplateBinding Content}"/>
             </Grid>
 
             <ControlTemplate.Triggers>
                 <!-- ウィンドウのサイズがニュートラルな状態のとき、[元のサイズに戻す]ボタンの場所を無くします -->
                 <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}"
-                                             Value="Normal">
+                             Value="Normal">
                     <Setter Property="Visibility" Value="Collapsed"/>
                 </DataTrigger>
             </ControlTemplate.Triggers>
@@ -53,15 +53,15 @@
             <!-- ニュートラル状態でのボタンのルックスです -->
             <Grid>
                 <Rectangle Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
-                                           Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
-                                            Fill="{TemplateBinding Background}"/>
+                           Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
+                           Fill="{TemplateBinding Background}"/>
                 <Label Content="{TemplateBinding Content}"/>
             </Grid>
 
             <ControlTemplate.Triggers>
                 <!-- ウィンドウのサイズが最大の状態のとき、[元のサイズに戻す]ボタンの場所を無くします -->
                 <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}"
-                                             Value="Maximized">
+                             Value="Maximized">
                     <Setter Property="Visibility" Value="Collapsed"/>
                 </DataTrigger>
             </ControlTemplate.Triggers>
@@ -86,15 +86,15 @@
         
         <!-- 左上に四角 -->
         <Rectangle Width="140" Height="140" Fill="WhiteSmoke"
-                   MouseDown="Application_MouseDown" MouseUp="Application_MouseUp"/>
+                   MouseDown="DustPaper_MouseDown" MouseUp="DustPaper_MouseUp"/>
 
         <!-- 右上に丸 -->
         <Ellipse Grid.Column="1" Width="140" Height="140" Fill="PapayaWhip"
-                 MouseDown="Application_MouseDown" MouseUp="Application_MouseUp"/>
+                 MouseDown="DustPaper_MouseDown" MouseUp="DustPaper_MouseUp"/>
 
         <!-- 下段に長方形 -->
         <Rectangle Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="140" Fill="AliceBlue"
-                   MouseDown="Application_MouseDown" MouseUp="Application_MouseUp"/>
+                   MouseDown="DustPaper_MouseDown" MouseUp="DustPaper_MouseUp"/>
 
         <!-- ちらしっぽいメッセージを書きましょう -->
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
