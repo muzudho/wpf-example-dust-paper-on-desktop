@@ -25,6 +25,8 @@
     -->
 
     <Window.Resources>
+
+        <!-- ウィンドウを元のサイズに戻すボタンです -->
         <ControlTemplate x:Key="normalButton" TargetType="Button">
 
             <!-- ニュートラル状態でのボタンのルックスです -->
@@ -44,6 +46,8 @@
             </ControlTemplate.Triggers>
 
         </ControlTemplate>
+
+        <!-- ウィンドウを最大化するボタンです -->
         <ControlTemplate x:Key="maximizedButton" TargetType="Button">
 
             <!-- ニュートラル状態でのボタンのルックスです -->
@@ -119,8 +123,8 @@
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Width="40" Height="30"
                     Content="最小" Click="MinimizedButton_Click"/>
-                
-                <!-- 元のサイズに戻すボタンです -->
+
+                <!-- ウィンドウを元のサイズに戻すボタンです -->
                 <Button Width="80" Height="30"
                     Content="元サイズ戻す" Click="NormalButton_Click" Template="{StaticResource normalButton}" />
 
