@@ -1,7 +1,7 @@
-﻿<Application x:Class="WpfExampleDustPaperOnDesktop.App"
+﻿<Application x:Class="WpfExerciseDustPaperOnDesktop.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WpfExampleDustPaperOnDesktop"
+             xmlns:local="clr-namespace:WpfExerciseDustPaperOnDesktop"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

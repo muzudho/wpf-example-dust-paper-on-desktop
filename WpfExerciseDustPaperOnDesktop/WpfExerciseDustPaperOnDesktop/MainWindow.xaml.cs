@@ -1,4 +1,4 @@
-﻿namespace WpfExampleDustPaperOnDesktop
+﻿namespace WpfExerciseDustPaperOnDesktop
 {
     using System.Diagnostics;
     using System.Windows;
