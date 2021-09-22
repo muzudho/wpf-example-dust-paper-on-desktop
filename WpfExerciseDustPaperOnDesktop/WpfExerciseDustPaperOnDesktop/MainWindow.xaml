@@ -85,15 +85,15 @@
         
         <!-- 左上に四角 -->
         <Rectangle Width="140" Height="140" Fill="WhiteSmoke"
-                   MouseDown="DustPaper_MouseDown" MouseUp="DustPaper_MouseUp"/>
+                   MouseDown="DustPaper_MouseDown" MouseMove="DustPaper_MouseMove" MouseUp="DustPaper_MouseUp"/>
 
         <!-- 右上に丸 -->
         <Ellipse Grid.Column="1" Width="140" Height="140" Fill="PapayaWhip"
-                 MouseDown="DustPaper_MouseDown" MouseUp="DustPaper_MouseUp"/>
+                 MouseDown="DustPaper_MouseDown" MouseMove="DustPaper_MouseMove" MouseUp="DustPaper_MouseUp"/>
 
         <!-- 下段に長方形 -->
         <Rectangle Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="140" Fill="AliceBlue"
-                   MouseDown="DustPaper_MouseDown" MouseUp="DustPaper_MouseUp"/>
+                   MouseDown="DustPaper_MouseDown" MouseMove="DustPaper_MouseMove" MouseUp="DustPaper_MouseUp"/>
 
         <!-- ちらしっぽいメッセージを書きましょう -->
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
