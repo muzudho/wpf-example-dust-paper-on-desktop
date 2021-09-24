@@ -21,13 +21,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_2D10C6F67B6F4084B75DB8673A8E4F63"
+        "MsmKey" = "8:_CC7351224CDB4ACEA4C308AD1915D819"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CC7351224CDB4ACEA4C308AD1915D819"
+        "MsmKey" = "8:_CF21555E86A147968499FFF8BFD46461"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -168,7 +168,7 @@
         {
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_5B9D271248B64C608CD19E34EBECD1B3"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -216,15 +216,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:WpfExerciseDustPaperOnDesktop"
-        "ProductCode" = "8:{79F629F2-0180-4581-BF99-A068DF30C2E6}"
-        "PackageCode" = "8:{13209D05-8890-4DAA-9A06-8A189DC3F3AD}"
+        "ProductCode" = "8:{8A468B97-9C25-4DB1-A908-7213B4A7FBD0}"
+        "PackageCode" = "8:{05028302-959A-45AF-83C1-C9B3CAF0CECF}"
         "UpgradeCode" = "8:{71246CD9-71CB-43AE-B5FC-EE9DC2058481}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.4"
+        "ProductVersion" = "8:1.0.5"
         "Manufacturer" = "8:Doujin Soft Circle Grayscale"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -238,7 +238,7 @@
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:0"
+        "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
@@ -337,21 +337,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3F7B4562A0AB43C99D2BCCFF1D1DBEBC"
-            {
-            "Name" = "8:ちり紙"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_2D10C6F67B6F4084B75DB8673A8E4F63"
-            "Folder" = "8:_7A95552AD9BD4EA7877FD153901834A9"
-            "WorkingFolder" = "8:_5B9D271248B64C608CD19E34EBECD1B3"
-            "Icon" = "8:_2980A889AEFD424194441AEF6A45962A"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_649BC62606BA4AFDA2DAC83C233FA866"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_589EB072B8C44709B89B7CC9E66F9E99"
             {
             "Name" = "8:Dust paper on the desktop"
             "Arguments" = "8:"
@@ -359,8 +345,22 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_2D10C6F67B6F4084B75DB8673A8E4F63"
+            "Target" = "8:_CF21555E86A147968499FFF8BFD46461"
             "Folder" = "8:_D0E1DC63B22E418692E1232A63754887"
+            "WorkingFolder" = "8:_5B9D271248B64C608CD19E34EBECD1B3"
+            "Icon" = "8:_2980A889AEFD424194441AEF6A45962A"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8D2185CAE8B04BF398EED766D52289ED"
+            {
+            "Name" = "8:ちり紙"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_CF21555E86A147968499FFF8BFD46461"
+            "Folder" = "8:_7A95552AD9BD4EA7877FD153901834A9"
             "WorkingFolder" = "8:_5B9D271248B64C608CD19E34EBECD1B3"
             "Icon" = "8:_2980A889AEFD424194441AEF6A45962A"
             "Feature" = "8:"
@@ -811,9 +811,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2D10C6F67B6F4084B75DB8673A8E4F63"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_CF21555E86A147968499FFF8BFD46461"
             {
-            "SourcePath" = "8:..\\WpfExerciseDustPaperOnDesktop\\obj\\Release\\netcoreapp3.1\\apphost.exe"
+            "SourcePath" = "8:..\\WpfExerciseDustPaperOnDesktop\\obj\\x64\\Release\\netcoreapp3.1\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5B9D271248B64C608CD19E34EBECD1B3"
@@ -831,7 +831,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
+            "OutputConfiguration" = "8:Release|x64"
             "OutputGroupCanonicalName" = "8:PublishItems"
             "OutputProjectGuid" = "8:{471C8D80-9D98-4277-92DC-06E427519C8D}"
             "ShowKeyOutput" = "11:TRUE"
