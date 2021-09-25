@@ -53,8 +53,17 @@
                     <Setter TargetName="normalButtonRect" Property="Stroke" Value="Blue"/>
                     <Setter TargetName="normalButtonRect" Property="Fill" Value="LightBlue"/>
                 </Trigger>
-            </ControlTemplate.Triggers>
 
+                <!--
+                    マウス ボタンを押下したときに、背景色を暗くします
+                -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="normalButtonRect" Property="Stroke" Value="White"/>
+                    <Setter TargetName="normalButtonRect" Property="Fill" Value="DarkGray"/>
+                </Trigger>
+                
+            </ControlTemplate.Triggers>
+            
         </ControlTemplate>
 
         <!-- ウィンドウを最大化するボタンです -->
@@ -84,6 +93,15 @@
                     <Setter TargetName="maximizedButtonRect" Property="Stroke" Value="Blue"/>
                     <Setter TargetName="maximizedButtonRect" Property="Fill" Value="LightBlue"/>
                 </Trigger>
+
+                <!--
+                    マウス ボタンを押下したときに、背景色を暗くします
+                -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="maximizedButtonRect" Property="Stroke" Value="White"/>
+                    <Setter TargetName="maximizedButtonRect" Property="Fill" Value="DarkGray"/>
+                </Trigger>
+
             </ControlTemplate.Triggers>
 
         </ControlTemplate>
