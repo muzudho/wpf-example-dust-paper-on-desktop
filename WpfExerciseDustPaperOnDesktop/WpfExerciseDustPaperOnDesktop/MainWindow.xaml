@@ -25,7 +25,7 @@
 
     <Window.Resources>
 
-        <!-- ウィンドウを元のサイズに戻すボタンです -->
+        <!-- ボタン -->
         <ControlTemplate x:Key="normalButton" TargetType="Button">
 
             <!-- ニュートラル状態でのボタンのルックスです -->
@@ -38,6 +38,7 @@
             </Grid>
 
             <ControlTemplate.Triggers>
+
                 <!--
                     "normalButtonRect" という名前の矩形を、この行より以前に作っておいてください。
                     マウスが重なった時に枠線を青くします
@@ -46,7 +47,6 @@
                     <Setter TargetName="normalButtonRect" Property="Stroke" Value="Blue"/>
                     <Setter TargetName="normalButtonRect" Property="Fill" Value="LightBlue"/>
                 </Trigger>
-
                 <!--
                     マウス ボタンを押下したときに、背景色を暗くします
                 -->
@@ -58,41 +58,7 @@
             </ControlTemplate.Triggers>
             
         </ControlTemplate>
-
-        <!-- ウィンドウを最大化するボタンです -->
-        <ControlTemplate x:Key="maximizedButton" TargetType="Button">
-
-            <!-- ニュートラル状態でのボタンのルックスです -->
-            <Grid>
-                <Rectangle Name="maximizedButtonRect"
-                           Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
-                           Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
-                           Fill="{TemplateBinding Background}"/>
-                <Label Content="{TemplateBinding Content}"/>
-            </Grid>
-
-            <ControlTemplate.Triggers>
-
-                <!--
-                    "maximizedButtonRect" という名前の矩形を、この行より以前に作っておいてください。
-                    マウスが重なった時に枠線を青くします
-                -->
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter TargetName="maximizedButtonRect" Property="Stroke" Value="Blue"/>
-                    <Setter TargetName="maximizedButtonRect" Property="Fill" Value="LightBlue"/>
-                </Trigger>
-
-                <!--
-                    マウス ボタンを押下したときに、背景色を暗くします
-                -->
-                <Trigger Property="IsPressed" Value="True">
-                    <Setter TargetName="maximizedButtonRect" Property="Stroke" Value="White"/>
-                    <Setter TargetName="maximizedButtonRect" Property="Fill" Value="DarkGray"/>
-                </Trigger>
-
-            </ControlTemplate.Triggers>
-
-        </ControlTemplate>
+        
     </Window.Resources>
     
     <!--
@@ -171,7 +137,7 @@
 
                 <!-- ウィンドウの [最大化]ボタン -->
                 <Button Width="40" Height="30"
-                    Content="最大" Click="MaximizedButton_Click" Template="{StaticResource maximizedButton}">
+                    Content="最大" Click="MaximizedButton_Click" Template="{StaticResource normalButton}">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Style.Triggers>
