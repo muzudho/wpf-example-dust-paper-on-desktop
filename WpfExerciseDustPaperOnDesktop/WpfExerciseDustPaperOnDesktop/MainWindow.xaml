@@ -142,23 +142,24 @@
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 
                 <!-- ウィンドウの [最小化]ボタン -->
-                <Button Width="40" Height="30" Content="最小" Click="MinimizedButton_Click"/>
+                <Button Width="40" Height="30" Content="最小"
+                        Click="MinimizedButton_Click"
+                        Template="{StaticResource normalButton}"/>
 
                 <!-- ウィンドウを [元のサイズに戻す]ボタン -->
-                <Button Width="80" Height="30"
-                        Content="元サイズ戻す" Click="NormalButton_Click"
-                        Template="{StaticResource normalButton}"
-                        Style="{StaticResource normalWindowSizeButton}"/>
+                <Button Width="80" Height="30" Content="元サイズ戻す"
+                        Click="NormalButton_Click"
+                        Template="{StaticResource normalButton}" Style="{StaticResource normalWindowSizeButton}"/>
 
                 <!-- ウィンドウの [最大化]ボタン -->
-                <Button Width="40" Height="30"
-                        Content="最大" Click="MaximizedButton_Click"
-                        Template="{StaticResource normalButton}"
-                        Style="{StaticResource maximizedButton}"/>
+                <Button Width="40" Height="30" Content="最大"
+                        Click="MaximizedButton_Click"
+                        Template="{StaticResource normalButton}" Style="{StaticResource maximizedButton}"/>
 
                 <!-- ウィンドウを [閉じる]ボタン -->
-                <Button Width="40" Height="30"
-                        Content="閉じ" Click="CloseButton_Click"/>
+                <Button Width="40" Height="30" Content="閉じ"
+                        Click="CloseButton_Click"
+                        Template="{StaticResource normalButton}"/>
                 
             </StackPanel>
         </Grid>
