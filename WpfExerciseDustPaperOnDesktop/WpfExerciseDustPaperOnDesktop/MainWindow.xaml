@@ -58,7 +58,33 @@
             </ControlTemplate.Triggers>
             
         </ControlTemplate>
-        
+
+        <!-- [元のサイズに戻す]ボタンのスタイル -->
+        <Style x:Key="normalWindowSizeButton" TargetType="Button">
+            <Style.Triggers>
+
+                <!-- ウィンドウのサイズがニュートラルな状態のとき、[元のサイズに戻す]ボタンの場所を無くします -->
+                <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}"
+                                             Value="Normal">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
+
+            </Style.Triggers>
+        </Style>
+
+        <!-- [最大化]ボタンのスタイル -->
+        <Style x:Key="maximizedButton" TargetType="Button">
+            <Style.Triggers>
+
+                <!-- ウィンドウのサイズが最大の状態のとき、[最大化]ボタンの場所を無くします -->
+                <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}"
+                                             Value="Maximized">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
+
+            </Style.Triggers>
+        </Style>
+
     </Window.Resources>
     
     <!--
@@ -119,43 +145,19 @@
 
                 <!-- ウィンドウを [元のサイズに戻す]ボタン -->
                 <Button Width="80" Height="30"
-                    Content="元サイズ戻す" Click="NormalButton_Click" Template="{StaticResource normalButton}">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Style.Triggers>
-                                
-                                <!-- ウィンドウのサイズがニュートラルな状態のとき、[元のサイズに戻す]ボタンの場所を無くします -->
-                                <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}"
-                                             Value="Normal">
-                                    <Setter Property="Visibility" Value="Collapsed"/>
-                                </DataTrigger>
-
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                </Button>
+                        Content="元サイズ戻す" Click="NormalButton_Click"
+                        Template="{StaticResource normalButton}"
+                        Style="{StaticResource normalWindowSizeButton}"/>
 
                 <!-- ウィンドウの [最大化]ボタン -->
                 <Button Width="40" Height="30"
-                    Content="最大" Click="MaximizedButton_Click" Template="{StaticResource normalButton}">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Style.Triggers>
-
-                                <!-- ウィンドウのサイズが最大の状態のとき、[元のサイズに戻す]ボタンの場所を無くします -->
-                                <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}"
-                                             Value="Maximized">
-                                    <Setter Property="Visibility" Value="Collapsed"/>
-                                </DataTrigger>
-
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                </Button>
+                        Content="最大" Click="MaximizedButton_Click"
+                        Template="{StaticResource normalButton}"
+                        Style="{StaticResource maximizedButton}"/>
 
                 <!-- ウィンドウを [閉じる]ボタン -->
                 <Button Width="40" Height="30"
-                    Content="閉じ" Click="CloseButton_Click"/>
+                        Content="閉じ" Click="CloseButton_Click"/>
                 
             </StackPanel>
         </Grid>
