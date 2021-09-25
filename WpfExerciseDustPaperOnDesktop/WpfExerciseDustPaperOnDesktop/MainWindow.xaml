@@ -30,9 +30,11 @@
 
             <!-- ニュートラル状態でのボタンのルックスです -->
             <Grid>
-                <Rectangle Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                <Rectangle Name="normalButtonRect"
+                           Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
                            Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
-                           Fill="{TemplateBinding Background}"/>
+                           Fill="{TemplateBinding Background}">
+                </Rectangle>
                 <Label Content="{TemplateBinding Content}"/>
             </Grid>
 
@@ -42,6 +44,15 @@
                              Value="Normal">
                     <Setter Property="Visibility" Value="Collapsed"/>
                 </DataTrigger>
+
+                <!--
+                    "normalButtonRect" という名前の矩形を、この行より以前に作っておいてください。
+                    マウスが重なった時に枠線を青くします
+                -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="normalButtonRect" Property="Stroke" Value="Blue"/>
+                    <Setter TargetName="normalButtonRect" Property="Fill" Value="LightBlue"/>
+                </Trigger>
             </ControlTemplate.Triggers>
 
         </ControlTemplate>
@@ -51,7 +62,8 @@
 
             <!-- ニュートラル状態でのボタンのルックスです -->
             <Grid>
-                <Rectangle Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                <Rectangle Name="maximizedButtonRect"
+                           Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
                            Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
                            Fill="{TemplateBinding Background}"/>
                 <Label Content="{TemplateBinding Content}"/>
@@ -63,6 +75,15 @@
                              Value="Maximized">
                     <Setter Property="Visibility" Value="Collapsed"/>
                 </DataTrigger>
+
+                <!--
+                    "maximizedButtonRect" という名前の矩形を、この行より以前に作っておいてください。
+                    マウスが重なった時に枠線を青くします
+                -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="maximizedButtonRect" Property="Stroke" Value="Blue"/>
+                    <Setter TargetName="maximizedButtonRect" Property="Fill" Value="LightBlue"/>
+                </Trigger>
             </ControlTemplate.Triggers>
 
         </ControlTemplate>
