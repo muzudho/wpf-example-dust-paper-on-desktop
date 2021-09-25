@@ -33,8 +33,7 @@
                 <Rectangle Name="normalButtonRect"
                            Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
                            Stroke="{TemplateBinding Foreground}" StrokeThickness="0.5"
-                           Fill="{TemplateBinding Background}">
-                </Rectangle>
+                           Fill="{TemplateBinding Background}"/>
                 <Label Content="{TemplateBinding Content}"/>
             </Grid>
 
