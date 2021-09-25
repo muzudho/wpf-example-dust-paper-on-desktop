@@ -47,6 +47,7 @@
                     <Setter TargetName="normalButtonRect" Property="Stroke" Value="Blue"/>
                     <Setter TargetName="normalButtonRect" Property="Fill" Value="LightBlue"/>
                 </Trigger>
+                
                 <!--
                     マウス ボタンを押下したときに、背景色を暗くします
                 -->
